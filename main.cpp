@@ -187,7 +187,7 @@ int main(void){
 
 
 
-    teste.writeOFF("/home/car/Documentos/Eduardo/Desenhos/Boneco.off");
+    teste.writeOFF("/home/eduardo/Documentos/Desenhos/Boneco.off");
     return 0;
 }
 

@@ -12,9 +12,13 @@ Sculptor::Sculptor(int _nx, int _ny, int _nz) {
   ny = _ny;
   nz = _nz;
 
-  v = (Voxel ***)new Voxel [nx];
-  v[0] = (Voxel **)new Voxel [nx * ny];
-  v[0][0] = new Voxel[nx * ny * nz];
+
+
+  //Voxel ***v;
+  v = (Voxel ***)new Voxel **[nx];
+  v[0] = (Voxel **) new Voxel *[nx * ny];
+  v[0][0] =(Voxel *) new Voxel [nx * ny * nz];
+
 
   for (int i = 1; i < nx; i++)
     v[i] = v[i - 1] + ny;
